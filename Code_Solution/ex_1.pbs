@@ -10,4 +10,3 @@ cd $PBS_O_WORKDIR
 
 # Launch the parallel job
 aprun -n 24 -N 24 ./ex_1
-
