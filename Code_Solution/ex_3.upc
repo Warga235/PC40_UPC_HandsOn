@@ -19,9 +19,9 @@ int main(int argc, char **argv){
     upc_barrier;
 
     //== add a for loop which goes through the elements in the x_new array
-    for( j=...; j<(...)-1; j++ ){
+    for( j=1; j<(TOTALSIZE)-1; j++ ){
         //== insert an if statement to do the work sharing across the threads
-        if( ... == MYTHREAD){
+        if( (j%THREADS) == MYTHREAD){
             x_new[j] = 0.5*( x[j-1] + x[j+1] + b[j] );
         }
     }
